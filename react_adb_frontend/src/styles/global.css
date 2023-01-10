@@ -1,4 +1,29 @@
 .map-container{
     height: 100vh;
     width: 100%;
+    position: relative;
 }
+.map{
+    width: 80%;
+    right: 0;
+} 
+
+.flexbox{
+    display: flex;
+    float: left;
+    justify-content: flex-start;
+}
+.form{
+    width: 20%;
+    position: relative;
+}
+
+/* .form{
+    display: flex;
+    width: auto;
+    height: auto;
+	float: left;
+    position: relative;
+    left: 10px;
+        
+} */
