@@ -15,12 +15,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Map/>} />
         <Route path='/neo4j' element={<Neo4j/>} />
-
       </Routes>
-
     </div>
-   
-    
   </>
   );
 }

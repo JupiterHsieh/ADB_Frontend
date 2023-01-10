@@ -1,25 +1,27 @@
 import React from 'react'
 import { Link } from "react-router-dom" 
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { NavLink } from 'react-router-dom'
+
 
 const Navbartool=()=>{
     return(
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <>
+      <Navbar bg="dark" variant="dark">
+      <Container>
+      <Navbar.Brand >ADB-Final</Navbar.Brand>
+        <Nav className="me-auto">
+          <NavLink to="/" className="nav-link">Map</NavLink>
+          <NavLink to="/neo4j" className="nav-link">Neo4j</NavLink>
+        </Nav>
+      </Container>
+    </Navbar>
 
-  <div class="collapse navbar-collapse" id="navbarText">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-      <Link class="nav-link" to="/">Map</Link>
-      </li>
-      <li class="nav-item">
-        <Link class="nav-link" to="/neo4j">Neo4j</Link>
-      </li>
-
-    </ul>
-
-  </div>
-</nav>
-
+    </>
+      
 
 
     );
