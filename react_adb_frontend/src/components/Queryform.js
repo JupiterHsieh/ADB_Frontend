@@ -43,7 +43,7 @@ const Queryform = ({onSave, queryparam})=>{
             <input type="date" name="startdate"  value={formstartdate} onChange={handleStartDateChange} />
             <p>Start Date</p>
             
-            <input type="date" name="enddate" value={formenddate} onChange={handleEndDateChange}/>
+            <input type="date" name="enddate" min={formstartdate} value={formenddate} onChange={handleEndDateChange}/>
             <p>End Date</p>
             <div>
           <select name="district" value={formdistrict} onChange={handleDistrictChange}>
