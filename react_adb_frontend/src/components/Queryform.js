@@ -34,9 +34,11 @@ const Queryform = ({ onSave, queryparam }) => {
 
   const handleSend = () => {
     onSave(queryData);
+
   };
 
   return (
+
     <div>
       <input
         type="date"
@@ -93,8 +95,9 @@ const Queryform = ({ onSave, queryparam }) => {
         <p>Orders/Suppliers</p>
       </div>
 
-      <button onClick={handleSend}> 送出</button>
+      <button type="submit" onClick={handleSend}> 送出</button>
     </div>
+
   );
 };
 
