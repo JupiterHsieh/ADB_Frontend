@@ -23,14 +23,14 @@ const Map = () => {
   useEffect(() => {
     setQueryresult((oldArray) => [...oldArray]);
     const requestOptions = {
-      method: "POST",
-      headers: { "Content-Type": "json" },
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ queryparam }),
     };
     console.log(requestOptions);
-    // fetch('https://reqres.in/api/posts', requestOptions)
-    // .then(response => response.json())
-    // .then(data => setQueryresult(data.id));
+      fetch('http://localhost:5000', requestOptions)
+     .then(response => response.json())
+     .then(data => setQueryresult(data.id));
   }, [queryparam]);
 
   const handleSave = (values) => {
