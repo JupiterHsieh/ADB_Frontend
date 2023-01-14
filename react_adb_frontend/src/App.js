@@ -1,4 +1,5 @@
 import logo from "./logo.svg";
+import React from 'react';
 import "./App.css";
 import Navbartool from "./components/Navbartool";
 import Map from "./pages/Map";

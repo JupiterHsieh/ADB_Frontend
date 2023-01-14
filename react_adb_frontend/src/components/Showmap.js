@@ -1,6 +1,7 @@
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 
 import { useEffect, useState } from "react";
+import React from 'react';
 
 const Showmap = ({ results }) => {
   const center = {
