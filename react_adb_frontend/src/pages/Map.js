@@ -9,9 +9,9 @@ import Showmap from "../components/Showmap";
 
 const Map = () => {
   const [queryparam, setQueryparam] = useState({
-    festival: "xmas",
-    item: "orders",
-    district: "台北市",
+    festival: "Xmas",
+    item: "Orders",
+    district: "臺北市",
   });
 
   const [queryresult, setQueryresult] = useState([
