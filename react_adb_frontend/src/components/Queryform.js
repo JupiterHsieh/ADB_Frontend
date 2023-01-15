@@ -42,7 +42,6 @@ const Queryform = ({ onSave, queryparam }) => {
         value={formfestival}
         onChange={handleFestivalChange}
       >
-        <option value="0">Xmas/CNY</option>
         <option value="Xmas">Xmas</option>
         <option value="CNY">CNY</option>
       </select>
@@ -54,7 +53,6 @@ const Queryform = ({ onSave, queryparam }) => {
           value={formdistrict}
           onChange={handleDistrictChange}
         >
-          <option value="0">Select Cities:</option>
           <option value="全臺灣">全臺灣</option>
           <option value="臺北市">臺北市</option>
           <option value="新北市">新北市</option>
@@ -80,9 +78,8 @@ const Queryform = ({ onSave, queryparam }) => {
 
       <div>
         <select name="item" value={formitem} onChange={handleItemChange}>
-          <option value="0">Orders/Suppliers</option>
-          <option value="Orders">Orders</option>
           <option value="Suppliers">Suppliers</option>
+          <option value="Orders">Orders</option>
         </select>
         <p>Orders/Suppliers</p>
       </div>
