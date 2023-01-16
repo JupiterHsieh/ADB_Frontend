@@ -21,10 +21,9 @@ const Showmap = ({ results }) => {
           center={center}
           mapContainerClassName="map-container"
         >
-          {items.map((item) => (
-            <Marker key={item.lat} position={item} />
+          {items.map((item,index) => (
+            <Marker key={item.index} position={item} />
           ))}
-          <Marker position={{ lat: 25.033, lng: 121.5654 }} />
         </GoogleMap>
       </LoadScript>
     </>

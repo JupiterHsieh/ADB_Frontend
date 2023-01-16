@@ -5,14 +5,14 @@ const Queryform = ({ onSave, queryparam }) => {
   const [queryData, setQueryData] = useState(queryparam);
   const { festival, item, district } = queryData;
 
-  const [formfestival, setFestival] = useState(festival);
+  const [formfestival, setFormFestival] = useState(festival);
   const [formdistrict, setFormDistrict] = useState(district);
   const [formitem, setFormItem] = useState(item);
 
   const handleFestivalChange = (event) => {
     const { name, value } = event.target;
     setQueryData((prevData) => ({ ...prevData, [name]: value }));
-    setFestival(event.target.value);
+    setFormFestival(event.target.value);
   };
 
   const handleDistrictChange = (event) => {
@@ -38,7 +38,7 @@ const Queryform = ({ onSave, queryparam }) => {
       </div>
 
       <select
-        name="formfestival"
+        name="festival"
         value={formfestival}
         onChange={handleFestivalChange}
       >

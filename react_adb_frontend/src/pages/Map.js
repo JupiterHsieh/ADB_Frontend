@@ -15,26 +15,27 @@ const Map = () => {
   });
 
   const [queryresult, setQueryresult] = useState([
-    { lat: 25.033, lng: 121.5654 },
-    { lat: 25.043, lng: 121.57 },
-    { lat: 25.032, lng: 121.56 },
   ]);
 
   useEffect(() => {
-    setQueryresult((oldArray) => [...oldArray]);
+   
     const requestOptions = {
       method: "POST",
       headers: { "Content-Type": "json" },
       body: JSON.stringify({ queryparam }),
     };
-    console.log(requestOptions);
-    // fetch('https://reqres.in/api/posts', requestOptions)
-    // .then(response => response.json())
-    // .then(data => setQueryresult(data.id));
+
+    const fn = async()=>{
+      const result = await fetch('http://127.0.0.1:5000/', requestOptions)
+      const jsonResult = await result.json()
+      setQueryresult(jsonResult)
+    }
+    fn()
+
   }, [queryparam]);
 
   const handleSave = (values) => {
-    // console.log(values);
+    console.log(values);
     setQueryparam(values);
   };
 
